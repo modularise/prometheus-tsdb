@@ -34,6 +34,7 @@ import (
 	"github.com/go-kit/kit/log"
 	"github.com/pkg/errors"
 	"github.com/modularise/prometheus-tsdb/pkg/labels"
+	"github.com/modularise/prometheus-tsdb/storage"
 	"github.com/modularise/prometheus-tsdb/tsdb"
 	"github.com/modularise/prometheus-tsdb/tsdb/chunks"
 	tsdb_errors "github.com/modularise/prometheus-tsdb/tsdb/errors"
@@ -309,7 +310,7 @@ func (b *writeBenchmark) ingestScrapesShard(lbls []labels.Labels, scrapeCount in
 				s.ref = &ref
 			} else if err := app.AddFast(*s.ref, ts, float64(s.value)); err != nil {
 
-				if errors.Cause(err) != tsdb.ErrNotFound {
+				if errors.Cause(err) != storage.ErrNotFound {
 					panic(err)
 				}
 
