@@ -39,6 +39,7 @@ import (
 	"github.com/modularise/prometheus-tsdb/tsdb/chunkenc"
 	tsdb_errors "github.com/modularise/prometheus-tsdb/tsdb/errors"
 	"github.com/modularise/prometheus-tsdb/tsdb/fileutil"
+	// Load the package into main to make sure minium Go version is met.
 	_ "github.com/modularise/prometheus-tsdb/tsdb/goversion"
 	"github.com/modularise/prometheus-tsdb/tsdb/wal"
 	"golang.org/x/sync/errgroup"
