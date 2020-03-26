@@ -5,6 +5,7 @@ go 1.13
 require (
 	github.com/alecthomas/units v0.0.0-20190924025748-f65c72e2690d // indirect
 	github.com/cespare/xxhash v1.1.0
+	github.com/davecgh/go-spew v1.1.1
 	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b
 	github.com/go-kit/kit v0.10.0
 	github.com/golang/protobuf v1.3.3 // indirect
@@ -12,6 +13,7 @@ require (
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/oklog/ulid v1.3.1
 	github.com/pkg/errors v0.9.1
+	github.com/pmezard/go-difflib v1.0.0
 	github.com/prometheus/client_golang v1.5.1
 	github.com/prometheus/common v0.9.1
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e
