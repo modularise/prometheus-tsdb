@@ -8,15 +8,13 @@ require (
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b
 	github.com/go-kit/kit v0.10.0
-	github.com/golang/protobuf v1.4.0 // indirect
 	github.com/golang/snappy v0.0.1
 	github.com/kr/pretty v0.2.0 // indirect
 	github.com/oklog/ulid v1.3.1
 	github.com/pkg/errors v0.9.1
 	github.com/pmezard/go-difflib v1.0.0
-	github.com/prometheus/client_golang v1.5.1
+	github.com/prometheus/client_golang v1.6.0
 	github.com/prometheus/common v0.9.1
-	github.com/prometheus/procfs v0.0.11 // indirect
 	github.com/stretchr/testify v1.5.1 // indirect
 	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a
 	golang.org/x/sys v0.0.0-20200420163511-1957bb5e6d1f
