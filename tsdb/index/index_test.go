@@ -30,7 +30,12 @@ import (
 	"github.com/modularise/prometheus-tsdb/tsdb/chunks"
 	"github.com/modularise/prometheus-tsdb/tsdb/encoding"
 	"github.com/modularise/prometheus-tsdb/internal/residuals/util/testutil"
+	"go.uber.org/goleak"
 )
+
+func TestMain(m *testing.M) {
+	goleak.VerifyTestMain(m)
+}
 
 type series struct {
 	l	labels.Labels

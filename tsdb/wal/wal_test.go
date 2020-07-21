@@ -24,10 +24,15 @@ import (
 	"testing"
 
 	"github.com/modularise/prometheus-tsdb/tsdb/fileutil"
+	"go.uber.org/goleak"
 
 	client_testutil "github.com/prometheus/client_golang/prometheus/testutil"
 	"github.com/modularise/prometheus-tsdb/internal/residuals/util/testutil"
 )
+
+func TestMain(m *testing.M) {
+	goleak.VerifyTestMain(m)
+}
 
 // TestWALRepair_ReadingError ensures that a repair is run for an error
 // when reading a record.
