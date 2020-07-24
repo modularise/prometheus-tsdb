@@ -3,7 +3,6 @@ module github.com/modularise/prometheus-tsdb
 go 1.13
 
 require (
-	github.com/alecthomas/units v0.0.0-20190924025748-f65c72e2690d // indirect
 	github.com/cespare/xxhash v1.1.0
 	github.com/davecgh/go-spew v1.1.1
 	github.com/dgryski/go-sip13 v0.0.0-20190329191031-25c5027a8c7b
@@ -22,7 +21,6 @@ require (
 	golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae
 	golang.org/x/tools v0.0.0-20200710042808-f1c4188a97a1 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
-	gopkg.in/alecthomas/kingpin.v2 v2.2.6
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
 
