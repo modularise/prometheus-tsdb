@@ -1,6 +1,6 @@
 module github.com/modularise/prometheus-tsdb
 
-go 1.13
+go 1.14
 
 require (
 	github.com/cespare/xxhash v1.1.0
@@ -18,10 +18,39 @@ require (
 	go.uber.org/goleak v1.0.0
 	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
-	golang.org/x/sys v0.0.0-20200625212154-ddb9806d33ae
-	golang.org/x/tools v0.0.0-20200710042808-f1c4188a97a1 // indirect
+	golang.org/x/sys v0.0.0-20200724161237-0e2f3a69832c
+	golang.org/x/tools v0.0.0-20200725200936-102e7d357031 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
 	gopkg.in/yaml.v2 v2.3.0 // indirect
 )
 
 replace k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
+
+exclude (
+	// Exclude grpc v1.30.0 because of breaking changes. See #7621.
+	google.golang.org/grpc v1.30.0
+
+	// Exclude pre-go-mod kubernetes tags, as they are older
+	// than v0.x releases but are picked when we update the dependencies.
+	k8s.io/client-go v1.4.0
+	k8s.io/client-go v1.4.0+incompatible
+	k8s.io/client-go v1.5.0
+	k8s.io/client-go v1.5.0+incompatible
+	k8s.io/client-go v1.5.1
+	k8s.io/client-go v1.5.1+incompatible
+	k8s.io/client-go v10.0.0+incompatible
+	k8s.io/client-go v11.0.0+incompatible
+	k8s.io/client-go v2.0.0+incompatible
+	k8s.io/client-go v2.0.0-alpha.1+incompatible
+	k8s.io/client-go v3.0.0+incompatible
+	k8s.io/client-go v3.0.0-beta.0+incompatible
+	k8s.io/client-go v4.0.0+incompatible
+	k8s.io/client-go v4.0.0-beta.0+incompatible
+	k8s.io/client-go v5.0.0+incompatible
+	k8s.io/client-go v5.0.1+incompatible
+	k8s.io/client-go v6.0.0+incompatible
+	k8s.io/client-go v7.0.0+incompatible
+	k8s.io/client-go v8.0.0+incompatible
+	k8s.io/client-go v9.0.0+incompatible
+	k8s.io/client-go v9.0.0-invalid+incompatible
+)
