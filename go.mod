@@ -17,11 +17,11 @@ require (
 	github.com/prometheus/common v0.13.0
 	github.com/stretchr/testify v1.5.1 // indirect
 	go.uber.org/atomic v1.6.0
-	go.uber.org/goleak v1.0.0
+	go.uber.org/goleak v1.1.10
 	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
-	golang.org/x/sys v0.0.0-20200724161237-0e2f3a69832c
-	golang.org/x/tools v0.0.0-20200725200936-102e7d357031 // indirect
+	golang.org/x/sys v0.0.0-20200821140526-fda516888d29
+	golang.org/x/tools v0.0.0-20200822203824-307de81be3f4 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
 )
 
@@ -29,7 +29,11 @@ replace k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
 
 exclude (
 	// Exclude grpc v1.30.0 because of breaking changes. See #7621.
+	github.com/grpc-ecosystem/grpc-gateway v1.14.7
+	google.golang.org/api v0.30.0
 	google.golang.org/grpc v1.30.0
+	google.golang.org/grpc v1.31.0
+	google.golang.org/grpc v1.32.0-dev
 
 	// Exclude pre-go-mod kubernetes tags, as they are older
 	// than v0.x releases but are picked when we update the dependencies.
