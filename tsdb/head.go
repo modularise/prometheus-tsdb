@@ -1401,7 +1401,6 @@ func (h *Head) chunksRange(mint, maxt int64, is *isolationState) (*headChunkRead
 		mint:		mint,
 		maxt:		maxt,
 		isoState:	is,
-		memChunkPool:	&h.memChunkPool,
 	}, nil
 }
 
@@ -1459,7 +1458,6 @@ type headChunkReader struct {
 	head		*Head
 	mint, maxt	int64
 	isoState	*isolationState
-	memChunkPool	*sync.Pool
 }
 
 func (h *headChunkReader) Close() error {
@@ -1503,7 +1501,7 @@ func (h *headChunkReader) Chunk(ref uint64) (chunkenc.Chunk, error) {
 		if garbageCollect {
 			// Set this to nil so that Go GC can collect it after it has been used.
 			c.chunk = nil
-			h.memChunkPool.Put(c)
+			s.memChunkPool.Put(c)
 		}
 	}()
 
