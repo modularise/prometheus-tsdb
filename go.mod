@@ -20,7 +20,7 @@ require (
 	go.uber.org/goleak v1.1.10
 	golang.org/x/lint v0.0.0-20200302205851-738671d3881b // indirect
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
-	golang.org/x/sys v0.0.0-20200821140526-fda516888d29
+	golang.org/x/sys v0.0.0-20200918174421-af09f7315aff
 	golang.org/x/tools v0.0.0-20200822203824-307de81be3f4 // indirect
 	google.golang.org/protobuf v1.24.0 // indirect
 )
