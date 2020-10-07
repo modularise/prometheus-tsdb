@@ -25,7 +25,10 @@ require (
 	google.golang.org/protobuf v1.24.0 // indirect
 )
 
-replace k8s.io/klog => github.com/simonpasquier/klog-gokit v0.1.0
+replace (
+	k8s.io/klog => github.com/simonpasquier/klog-gokit v0.3.0
+	k8s.io/klog/v2 => github.com/simonpasquier/klog-gokit/v2 v2.0.1
+)
 
 exclude (
 	// Exclude grpc v1.30.0 because of breaking changes. See #7621.
